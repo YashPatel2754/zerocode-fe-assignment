@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.dark {
+  --bg-color: #1a202c;
+  --text-color: #ffffff;
+  --input-bg: #2d3748;
+  --btn-bg: #2b6cb0;
+  --btn-hover: #2c5282;
+}
+
+:root {
+  --bg-color: #f7fafc;
+  --text-color: #1a202c;
+  --input-bg: #edf2f7;
+  --btn-bg: #3182ce;
+  --btn-hover: #2b6cb0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Reuse tailwind utility with variables */
+.input {
+  @apply px-3 py-2 border rounded w-full;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.btn {
+  @apply px-4 py-2 rounded w-full;
+  background-color: var(--btn-bg);
+  color: white;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.dark .chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+.dark .chat-box::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
